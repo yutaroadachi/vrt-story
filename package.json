@@ -1,0 +1,15 @@
+{
+  "name": "vrt-story",
+  "version": "1.0.0",
+  "description": "Visual Regression Testing for story",
+  "private": true,
+  "scripts": {
+    "actual": "storycap http://localhost:9001 --outDir \"./actual\"",
+    "expected": "storycap http://localhost:9001 --outDir \"./expected\"",
+    "vrt": "reg-cli \"./actual\" \"./expected\" \"./diff\" --report ./report.html"
+  },
+  "devDependencies": {
+    "reg-cli": "^0.17.0",
+    "storycap": "^4.0.0"
+  }
+}
